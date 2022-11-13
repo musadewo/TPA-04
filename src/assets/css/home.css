@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --background-color: #fbf2cf;
+  --text-color: #000;
+  --white-color: #fff;
+  --second-color: #ef9a53;
+  --span-color: #eb6440;
+  --background-foto-color: #fcddb0;
+}
+body {
+  background: var(--background-color);
+}
+img {
+  width: 100%;
+}
+.home {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-content {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--background-foto-color);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  object-position: center;
+}
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home-text h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--span-color);
+}
+.home-text h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  left: -15px;
+  width: 20px;
+  height: 2px;
+  background: var(--span-color);
+}
+.home-text h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  right: -35px;
+  width: 20px;
+  height: 2px;
+  background: var(--span-color);
+}
+.home-text h2 {
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+}
+.home-text p {
+  margin-top: 1rem;
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
+}
+.home-text .color {
+  color: var(--span-color);
+}
+@media (max-width: 990px) {
+  .container-home {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+@media (max-width: 892px) {
+  section {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 775px) {
+  .home {
+    min-height: 500px;
+    padding-top: 6rem;
+  }
+  .home-text h3 {
+    font-size: 1rem;
+  }
+  .home-text h2 {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+  .home-text p {
+    font-size: 0.825rem;
+  }
+}
+@media (max-width: 450px) {
+  .home {
+    min-height: 485px;
+    padding-top: 140px;
+  }
+  .home-img {
+    width: 140px;
+    height: 140px;
+  }
+  .home-img img {
+    width: 140px;
+    height: 140px;
+  }
+  .home-text h2 {
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+  }
+  .home-text p br {
+    display: contents;
+  }
+}
